@@ -1,0 +1,14 @@
+{
+  "name": "tailwindcssc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i src/styles.css -o public/output.css --watch"
+  },
+  "author": "SEMR",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.0.22"
+  }
+}
