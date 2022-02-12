@@ -6,9 +6,18 @@
   "scripts": {
     "build": "tailwindcss -i src/styles.css -o public/output.css --watch"
   },
-  "author": "SEMR",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SMRsv/tailwindcssc.git"
+  },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "dependencies": {
+  "bugs": {
+    "url": "https://github.com/SMRsv/tailwindcssc/issues"
+  },
+  "homepage": "https://github.com/SMRsv/tailwindcssc#readme",
+  "devDependencies": {
     "tailwindcss": "^3.0.22"
   }
 }
