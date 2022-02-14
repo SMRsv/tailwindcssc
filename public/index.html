@@ -8,17 +8,38 @@
     <title>TailwindCSS Course</title>
 </head>
 <body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+    <div class="lg:container xl:mx-auto bg-green-300">
+        <div class="flex gap-8 flex-wrap">
+            <div class="flex-initial font-sans bg-indigo-400 w-40 h-40 text-center text-gray-100 text-xl">
+                Flex-1
+            </div>
+            <div class="flex-grow font-sans bg-purple-400 w-40 h-40 text-center text-gray-100 text-xl">
+                Flex-2
+            </div>
+            <div class="flex-initial font-sans bg-pink-400 w-40 h-40 text-center text-gray-100 text-xl">
+                Flex-3
+            </div>
+        </div>
+    </div>
+    <hr class="bg-black">
+    <div class="lg:container xl:mx-auto bg-indigo-600 h-32">
+        <h2 class="text-2xl text-gray-200 text-center">
+            Container
+        </h2>
+    </div>
+    <hr class="bg-black">
+    <p class="font-mono text-xl">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse accusamus laudantium autem, voluptates dolor magni reprehenderit. Quos eum impedit quidem.
+    </p>
+    <hr class="bg-black">
     <p class="font-sans text-lg text-gray-800">
         I'm a sans-serif lg paragraph.
     </p>
     <p class="font-serif text-sm text-blue-800">
         I'm a serif sm blue paragraph.
     </p>
-    <p class="font-mono text-lg text-gray-800">
-        I'm a mono lg paragraph.
+    <p class="font-mono text-xl text-gray-800">
+        I'm a mono xl paragraph.
     </p>
 </body>
 </html>
