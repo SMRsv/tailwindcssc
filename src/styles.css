@@ -2,3 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn{
+    @apply py-4 px-7 font-bold text-black rounded-lg shadow-md border border-gray-600;
+}
+.btn-green{
+    @apply rounded-lg shadow-md text-white bg-green-400 border-none hover:bg-green-500;
+}
