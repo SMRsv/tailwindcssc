@@ -9,3 +9,55 @@
 .btn-green{
     @apply rounded-lg shadow-md text-white bg-green-400 border-none hover:bg-green-500;
 }
+/*@layes base*/
+@layer base {
+    a{
+        @apply text-[#41D8A7] underline font-bold;
+    }
+}
+/*@layer components*/
+@layer components{
+    .btn-blue{
+        @apply py-2 px-4 bg-cyan-500 text-white font-semibold rounded-lg shadow-md hover:bg-[#41D8A7];
+        @apply text-black;
+    }
+}
+/*@layer utilities @variants*/
+@layer utilities{
+    .p-21{
+        padding: 5.5rem;
+    }
+    @variants hover, focus{
+        .p-21{
+            padding: 5.5rem;
+        }
+    }
+    @variants focus, hover{
+        .rotate-0{
+            transform:rotate(10deg);
+        }
+    }
+    .rotate-0{
+        transform:rotate(0deg);
+    }
+}
+@variants focus, hover{
+    .rotate-0{
+        transform:rotate(10deg);
+    }
+}
+/*@responsive*/
+@responsive{
+    .rotate-10{
+        transform:rotate(20deg);
+    }
+    .rotate-11{
+        transform:rotate(-20deg);
+    }
+}
+/*FUNCTIONS @media*/
+@media screen(md){
+    .rotate-1{
+        transform:rotate(-10deg);
+    }
+}
