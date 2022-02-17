@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/styles.css -o ./public/output.css --watch"
+    "build": "postcss ./src/styles.css -o ./public/output.css --watch"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,10 @@
   "homepage": "https://github.com/SMRsv/tailwindcssc#readme",
   "devDependencies": {
     "tailwindcss": "^3.0.22"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0"
   }
 }

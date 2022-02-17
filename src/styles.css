@@ -55,9 +55,27 @@
         transform:rotate(-20deg);
     }
 }
-/*FUNCTIONS @media*/
+/*FUNCTIONS @media screen function*/
 @media screen(md){
     .rotate-1{
         transform:rotate(-10deg);
     }
+}
+
+/*FUNCTIONS theme function*/
+.content-area{
+    height:theme('spacing.[2.5]');
+}
+
+/*postcss.config.js*/
+.btn-pcss{
+    @apply p-3;
+}
+input::placeholder{
+    color: blueviolet
+}
+
+/*Tailwind utility classes*/
+.button{
+    @apply text-center sm:text-left md:text-right lg:font-bold xl:text-left 
 }
