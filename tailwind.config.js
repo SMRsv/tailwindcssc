@@ -2,6 +2,7 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   mode: 'jit',
+  darkMode:'class',
   content: ["./public/**/*.{html,js}"],
   theme: {
     screens: {
@@ -29,6 +30,7 @@ module.exports = {
       textColor: ['visited'],
     },
   },
+  /*prefix:'tail-',*/
   plugins: [
     plugin(function({addUtilities}){
       const newUtilities = {
@@ -44,5 +46,54 @@ module.exports = {
       };
       addUtilities(newUtilities);
     }),
+    plugin(function({addComponents}){
+      const button = {
+        '.butn':{
+          padding:'.5rem 1rem',
+          fontWeight:'600',
+        },
+        '.butn-blue':{
+          color:'#fff',
+          backgroundColor:'#000',
+          '&:hover':{
+            color:'#000',
+            backgroundColor:'#fff',
+          },
+        },
+        '.butn-gre':{
+          color:'#000',
+          backgroundColor:'#A9FBD7',
+        }
+      };
+      addComponents(button);
+    }),
+    plugin(function({ addBase, theme }) {
+      const heading = {
+        'h1': {fontSize: '30px'},
+        'h2': {fontSize: '25px'},
+        'h3': {fontSize: '20px'},
+        'h4': {fontSize: theme('fontSize.2xl')},
+      }
+      addBase(heading);
+    }),
   ],
+  presets: [
+    require('./presets/tailwind.preset'),
+  ],
+  /*plugins: [
+    plugin(function({addComponents}){
+      const button = {
+        'butn':{
+          padding:'.5rem 1rem',
+          fontWeight:'600',
+        },
+        'butn-blue':{
+          color:'#fff',
+          '&:hover':{
+            color:'#000',
+          },
+        },
+      };
+    }),
+  ],*/
 }

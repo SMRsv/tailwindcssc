@@ -87,5 +87,15 @@ input::placeholder{
 
 /*plugins*/
 .newqwer1{
-    @apply rota-001
+    @apply rota-001 sm:rota-002
+}
+
+.component1{
+    @apply butn butn-blue
+}
+.component2{
+    @apply butn bg-cyan-700 text-white hover:butn-gre
+}
+.preset{
+    @apply p-4.5
 }
