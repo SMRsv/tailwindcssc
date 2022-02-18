@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   mode: 'jit',
   content: ["./public/**/*.{html,js}"],
@@ -21,5 +23,26 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  variants:{
+    extend:{
+      backgroundColor: ['active'],
+      textColor: ['visited'],
+    },
+  },
+  plugins: [
+    plugin(function({addUtilities}){
+      const newUtilities = {
+        '.scale-001':{
+          tranform: 'scale(1)'
+        },
+        '.rota-001':{
+          transform: 'rotate(25deg)'
+        },
+        '.rota-002':{
+          transform: 'rotate(-25deg)'
+        },
+      };
+      addUtilities(newUtilities);
+    }),
+  ],
 }

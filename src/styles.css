@@ -79,3 +79,13 @@ input::placeholder{
 .button{
     @apply text-center sm:text-left md:text-right lg:font-bold xl:text-left 
 }
+
+/*Tailwind Extends Variant*/
+.bg-content{
+    @apply active:bg-indigo-400
+};
+
+/*plugins*/
+.newqwer1{
+    @apply rota-001
+}
